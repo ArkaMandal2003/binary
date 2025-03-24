@@ -20,6 +20,8 @@ test_student_submissions = [
 test_master_copy = ["AI is improving industries by automating tasks and processing large amounts of data."]
 
 import numpy as np
+import os
+os.system("pip install nltk")
 import nltk
 import random
 from sklearn.feature_extraction.text import TfidfVectorizer
