@@ -21,8 +21,11 @@ test_master_copy = ["AI is improving industries by automating tasks and processi
 
 import numpy as np
 import os
-os.system("pip install nltk")
+os.system("pip install --upgrade pip")  # Ensure latest pip
+os.system("pip install --no-cache-dir nltk")  # Force fresh install
+
 import nltk
+
 import random
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
