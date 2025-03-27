@@ -39,6 +39,7 @@ except ModuleNotFoundError:
     from difflib import SequenceMatcher
     from textblob import TextBlob
 
+os.system("pip install -r requirements.txt")
 
 nltk.download('punkt')
 
