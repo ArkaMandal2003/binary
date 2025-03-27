@@ -31,7 +31,7 @@ try:
     from difflib import SequenceMatcher
     from textblob import TextBlob
 except ModuleNotFoundError:
-    os.system("pip install nltk scikit-learn sentence-transformers textblob")
+    os.system("pip install nltk")
     import nltk
     from sklearn.feature_extraction.text import TfidfVectorizer
     from sklearn.metrics.pairwise import cosine_similarity
