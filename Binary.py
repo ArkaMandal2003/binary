@@ -19,19 +19,26 @@ test_student_submissions = [
 ]
 test_master_copy = ["AI is improving industries by automating tasks and processing large amounts of data."]
 
-import numpy as np
 import os
-os.system("pip install --upgrade pip")  # Ensure latest pip
-os.system("pip install --no-cache-dir nltk")  # Force fresh install
+import streamlit as st
 
-import nltk
-import random
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
-from sentence_transformers import SentenceTransformer
-from difflib import SequenceMatcher 
-from textblob import TextBlob
-import pickle
+# Install dependencies if missing (only for deployment)
+try:
+    import nltk
+    from sklearn.feature_extraction.text import TfidfVectorizer
+    from sklearn.metrics.pairwise import cosine_similarity
+    from sentence_transformers import SentenceTransformer
+    from difflib import SequenceMatcher
+    from textblob import TextBlob
+except ModuleNotFoundError:
+    os.system("pip install nltk scikit-learn sentence-transformers textblob")
+    import nltk
+    from sklearn.feature_extraction.text import TfidfVectorizer
+    from sklearn.metrics.pairwise import cosine_similarity
+    from sentence_transformers import SentenceTransformer
+    from difflib import SequenceMatcher
+    from textblob import TextBlob
+
 
 nltk.download('punkt')
 
