@@ -35,7 +35,7 @@ from textblob import TextBlob
 import pickle
 
 nltk.download('punkt')
-nltk.download('punkt_tab')
+
 
 model = SentenceTransformer('paraphrase-MiniLM-L6-v2')# eta huggingface transformer
 
